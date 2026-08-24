@@ -1,0 +1,20 @@
+[
+    {
+        "Nombre": "Mono",
+        "Dificultad_Respiracion": "Sí",
+        "Dolor": 4,
+        "Gravedad": "Código Rojo"
+    },
+    {
+        "Nombre": "Suzu",
+        "Dificultad_Respiracion": "No",
+        "Dolor": 8,
+        "Gravedad": "Código Amarillo"
+    },
+    {
+        "Nombre": "Babi",
+        "Dificultad_Respiracion": "No",
+        "Dolor": 2,
+        "Gravedad": "Código Verde"
+    }
+]

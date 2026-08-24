@@ -1,0 +1,3 @@
+django
+tabulate
+python-dotenv   
