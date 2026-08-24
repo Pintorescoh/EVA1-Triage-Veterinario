@@ -25,6 +25,7 @@
                 <th>Dificultad Respiratoria</th>
                 <th>Nivel de Dolor</th>
                 <th>Código de Gravedad</th>
+                <th>Sala Asignada</th>
             </tr>
         </thead>
         <tbody>
@@ -36,13 +37,19 @@
                 <td>{{ paciente.Dolor }}</td>
                 
                 <!-- Le ponemos un poco de color dependiendo de la gravedad -->
-                {% if paciente.Gravedad == 'Código Rojo' %}
-                    <td class="Rojo">{{ paciente.Gravedad }}</td>
-                {% elif paciente.Gravedad == 'Código Amarillo' %}
-                    <td class="Amarillo">{{ paciente.Gravedad }}</td>
-                {% else %}
-                    <td class="Verde">{{ paciente.Gravedad }}</td>
-                {% endif %}
+                <!-- Le ponemos un poco de color dependiendo de la gravedad -->
+            {% if paciente.Gravedad == 'Código Rojo' %}
+                <td class="Rojo">{{ paciente.Gravedad }}</td>
+                <td class="Rojo"><strong>Box de Reanimación</strong></td>
+                
+            {% elif paciente.Gravedad == 'Código Amarillo' %}
+                <td class="Amarillo">{{ paciente.Gravedad }}</td>
+                <td class="Amarillo"><strong>Box de Observación</strong></td>
+                
+            {% else %}
+                <td class="Verde">{{ paciente.Gravedad }}</td>
+                <td class="Verde"><strong>Sala de Espera General</strong></td>
+            {% endif %}
             </tr>
             {% empty %}
             <tr>
